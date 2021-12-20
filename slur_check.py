@@ -28,8 +28,8 @@ slur_word_list = f.readlines()
 slur_word_list = [word.strip() for word in slur_word_list] #removes white space and newline
 slur_word_list = [word.lower() for word in slur_word_list if word] #removes empty strings and lowers the case
 df = read_input('tweets.txt')
-
-
+df['abuse_score'] = list('0'*len(df['tweets']))
+print(df)
 for i in range(len(df['tweets'])):
 	abuse_score = 0 
 	tweet = copy(df['tweets'][i])
@@ -37,9 +37,9 @@ for i in range(len(df['tweets'])):
 	for tweet_word in tweet_tokenized:
 		if tweet_word in slur_word_list:
 			abuse_score +=1
-	print(abuse_score)
-		
-	
+	df["abuse_score"][i] = abuse_score
+
+df.to_csv('tweet_abuse_scores.csv', index = False)
 
 	
 
