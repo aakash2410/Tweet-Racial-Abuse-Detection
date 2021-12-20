@@ -6,3 +6,14 @@ We here identify racial abuse on twitter by telling the degree of profanity in e
  2. If tweets are in txt file, they end with a "/end" string.
  3. If tweets are in csv or excel file, the tweets will be under a column name "tweets".
  4. Set of slur words will be given a text file named slur_word_list.txt where every slur word is written on a new line.
+
+## Requirements:
+1. pandas 
+2. nltk
+3. copy
+
+## To run this program after downloading:
+1. Install the requirements
+2. Set up the files required (slur_word_list.txt and the file containing the tweets) in the project directory
+3. Go to CMD in the project directory
+4. enter the command "python slur_check.py <file_name>"
