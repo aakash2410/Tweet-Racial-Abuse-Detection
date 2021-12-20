@@ -9,8 +9,7 @@ We here identify racial abuse on twitter by telling the degree of profanity in e
 
 ## Requirements:
 1. pandas 
-2. nltk
-3. copy
+2. copy
 
 ## To run this program after downloading:
 1. Install the requirements
